@@ -8,12 +8,11 @@ DOCKER_PATH="/srv/docker/blog"
 echo ""
 echo "======== BEGIN ========"
 
-git log --oneline --max-count=10
-
 echo ""
 echo "======== PULL SOURCE ========"
 echo "$GIT_PATH"
 cd $GIT_PATH
+git log --oneline --max-count=10
 git pull origin
 
 echo ""
