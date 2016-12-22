@@ -1,28 +1,30 @@
 #!/bin/sh
 #
-GIT_PATH=$PWD
-GIHUB_REPO="git@github.com:croef/blog_source.git"
-DOCKER_PATH="/srv/docker/blog"
+who
 
-echo "======== PULL SOURCE ========"
-cd $GIT_PATH
-git pull origin
+# GIT_PATH=$PWD
+# GIHUB_REPO="git@github.com:croef/blog_source.git"
+# DOCKER_PATH="/srv/docker/blog"
 
-echo ""
-echo "======== CHECK GITHUB REPO ========"
-git remote
-g=$(git remote | grep github)
+# echo "======== PULL SOURCE ========"
+# cd $GIT_PATH
+# git pull origin
 
-if [ "$g" = "github" ]
-then
-	echo "HAS GITHUB"
-else
-	echo "ADD REMOTE GITHUB"
-	git remote add github "$GIHUB_REPO"
-fi
-echo "======== PUSH GITHUB ========"
-git push github
+# echo ""
+# echo "======== CHECK GITHUB REPO ========"
+# git remote
+# g=$(git remote | grep github)
 
-echo ""
-echo "======== HEXO GENERATE ========"
-docker run -it --rm -v "$DOCKER_PATH":/root/blog croef/hexo generate
+# if [ "$g" = "github" ]
+# then
+# 	echo "HAS GITHUB"
+# else
+# 	echo "ADD REMOTE GITHUB"
+# 	git remote add github "$GIHUB_REPO"
+# fi
+# echo "======== PUSH GITHUB ========"
+# git push github
+
+# echo ""
+# echo "======== HEXO GENERATE ========"
+# docker run -it --rm -v "$DOCKER_PATH":/root/blog croef/hexo generate
