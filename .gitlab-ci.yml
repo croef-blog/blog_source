@@ -7,20 +7,20 @@ stages:
 pull:
   stage: pull
   script:
-    - cd home/blog
+    - cd /home/blog
     - echo "pull from origin"
     - git pull
 
 push:
   stage: push
   script:
-    - cd home/blog
+    - cd /home/blog
     - echo "push to github"
     - git push github
     
 deploy:
   stage: deploy
   script:
-    - cd home/blog
+    - cd /home/blog
     - echo "generate blog"
     - docker run -it --rm -v /srv/docker/blog:/root/blog croef/hexo generate
