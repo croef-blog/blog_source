@@ -1,6 +1,6 @@
 blog:
   stage: deploy
   script:
-  - /bin/bash who
+  - who
   only:
   - master
