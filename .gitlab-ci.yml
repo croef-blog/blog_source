@@ -1,6 +1,6 @@
 blog:
   stage: deploy
   script:
-  - who
+  - sh /home/blog/update-blog.sh
   only:
   - master
