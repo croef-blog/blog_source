@@ -23,4 +23,4 @@ deploy:
   script:
     - cd /home/blog
     - echo "generate blog"
-    - docker run -it --rm -v ${DOCKER_BLOG_SRC}:/root/blog croef/hexo generate
+    - docker run -it --rm -v "$DOCKER_BLOG_SRC":/root/blog croef/hexo generate
