@@ -9,7 +9,7 @@ cd $GIT_PATH
 git pull origin
 
 echo ""
-echo "======== PUSH GITHUB ========"
+echo "======== CHECK GITHUB REPO ========"
 git remote
 g=$(git remote | grep github)
 
@@ -20,6 +20,7 @@ else
 	echo "ADD REMOTE GITHUB"
 	git remote add github "$GIHUB_REPO"
 fi
+echo "======== PUSH GITHUB ========"
 git push github
 
 echo ""
