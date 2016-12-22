@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 who
-PWD
+pwd
 
 # GIT_PATH=$PWD
 # GIHUB_REPO="git@github.com:croef/blog_source.git"
