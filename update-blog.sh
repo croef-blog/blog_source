@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 GIT_PATH=$PWD
-GIHUB_REPO="https://github.com/croef/blog_source.git"
+GIHUB_REPO="git@github.com:croef/blog_source.git"
 DOCKER_PATH="/srv/docker/blog"
 
 echo "======== PULL SOURCE ========"
