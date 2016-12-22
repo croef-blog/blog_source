@@ -1,0 +1,6 @@
+pages:
+  stage: deploy
+  script:
+  - sh update-blog.sh
+  only:
+  - master
