@@ -28,3 +28,4 @@ echo ""
 echo "======== HEXO GENERATE ========"
 cd $DOCKER_COMPOSE_PATH
 docker-compose run --rm hexo generate
+docker-compose restart hexo
