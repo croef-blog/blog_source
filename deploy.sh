@@ -1,9 +1,11 @@
 #!/bin/sh
 #
 
-GIT_PATH="/home/blog"
+cd $(dirname $0)
+DIR_PATH=$(pwd)
 
-DOCKER_PATH="/srv/docker/blog"
+DOCKER__DATA_PATH="/home/srv/blog"
+DOCKER_COMPOSE_PATH="/home/docker"
 
 echo ""
 echo "======== BEGIN ========"
@@ -18,4 +20,5 @@ git pull
 
 echo ""
 echo "======== HEXO GENERATE ========"
-docker run -it --rm -v "$DOCKER_PATH":/root/blog croef/hexo generate
+cd DOCKER_COMPOSE_PATH
+docker-compose --rm run hexo generate
