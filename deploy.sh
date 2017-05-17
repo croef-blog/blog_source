@@ -19,6 +19,12 @@ echo "======== PULL SOURCE ========"
 git pull
 
 echo ""
+echo "======== PREPARE DATA ========"
+cd $DOCKER__DATA_PATH
+rm -rf source
+cp -r $DIR_PATH/source/ .
+
+echo ""
 echo "======== HEXO GENERATE ========"
 cd $DOCKER_COMPOSE_PATH
 docker-compose run --rm hexo generate
