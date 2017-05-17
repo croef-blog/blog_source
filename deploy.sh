@@ -9,8 +9,8 @@ DOCKER_COMPOSE_PATH="/home/docker"
 
 echo ""
 echo "======== BEGIN ========"
-cd $GIT_PATH
-echo "$GIT_PATH"
+cd $DIR_PATH
+echo "$DIR_PATH"
 
 git log --oneline --max-count=10
 
