@@ -20,5 +20,5 @@ git pull
 
 echo ""
 echo "======== HEXO GENERATE ========"
-cd DOCKER_COMPOSE_PATH
+cd $DOCKER_COMPOSE_PATH
 docker-compose run --rm hexo generate
