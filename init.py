@@ -18,6 +18,7 @@ POSTS_DIR = os.path.join(SRC_DIR, 'source', '_posts')
 TEMPLATE = '---\n' \
            'title:  {title}\n' \
            '{tags}' \
+           'date: {date}\n' \
            '---\n' \
            'hello world'
 
@@ -41,15 +42,20 @@ def main(args=None):
         tags = 'tags:\n'
         for tag in tag_list:
             tags += '- {}\n'.format(tag)
-    print("page will init new with title:{title} and tags:{tags}".format(title=title, tags=tags.replace('\n', '')))
-    file_name = '{date}-{title}.md'.format(date=time.strftime("%Y-%m-%d"), title=title.replace(' ', '-'))
+    print("page will init new with title:{title} and tags:{tags}".format(
+        title=title, tags=tags.replace('\n', '')))
+    file_name = '{date}-{title}.md'.format(
+        date=time.strftime("%Y-%m-%d"), title=title.replace(' ', '-'))
     template = read().format(
         title=title,
-        tags=tags
+        tags=tags,
+        date=time.strftime("%Y-%m-%d %H:%m:%S")
     )
+    image_dir = os.path.join(POSTS_DIR, file_name.replace(".md", ""))
     file_name = os.path.join(POSTS_DIR, file_name)
     with open(file_name, 'w', encoding='utf-8') as f:
         f.write(template)
+    os.makedirs(image_dir)
     print('page init done')
     print('new page path: {path}'.format(path=file_name))
 
