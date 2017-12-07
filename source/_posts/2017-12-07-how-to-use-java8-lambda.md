@@ -10,8 +10,8 @@ date: 2017-12-07 22:12:22
 ### `Function<T, R>` T作为输入，返回的R作为输出
 ```java
 Function<String, String> function = (x) -> {
-	System.out.print(x+": ");
-	return "Function";
+  System.out.print(x+": ");
+  return "Function";
 };
 
 String result = function.apply("hello world");
@@ -21,8 +21,8 @@ String result = function.apply("hello world");
 ### `Predicate<T>` T作为输入，返回的boolean值作为输出
 ```java
 Predicate<String> pre = (x) ->{
-	System.out.print(x);
-	return false;
+  System.out.print(x);
+  return false;
 };
 
 
@@ -49,7 +49,7 @@ String result = supp.get();
 ### BinaryOperator\<T> 两个T作为输入，返回一个T作为输出，对于“reduce”操作很有用
 ```java
 BinaryOperator<String> bina = (x, y) ->{
-	return x + " " + y;	
+  return x + " " + y;	
 };
 
 String result = bina.apply("hello", "world");
