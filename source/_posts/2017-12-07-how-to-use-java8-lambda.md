@@ -46,7 +46,7 @@ String result = supp.get();
 ```
  
 
-### BinaryOperator\<T> 两个T作为输入，返回一个T作为输出，对于“reduce”操作很有用
+### `BinaryOperator<T>` 两个T作为输入，返回一个T作为输出，对于“reduce”操作很有用
 ```java
 BinaryOperator<String> bina = (x, y) ->{
   return x + " " + y;	
