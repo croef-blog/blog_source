@@ -1,5 +1,5 @@
 ---
-title: 收集机器学习相关的干活-2018.3.13更新
+title: 收集机器学习相关的干货-2018.3.13更新
 tags:
 - blogs
 - machinelearning
