@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  # hexo
+  hexo:
+    image: docker_hexo:latest
+    volumes:
+      - /home/srv/blog:/root/blog
+      - /etc/localtime:/etc/localtime

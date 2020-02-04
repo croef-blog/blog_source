@@ -26,5 +26,5 @@ cp -r $DIR_PATH/source/ .
 
 echo ""
 echo "======== HEXO GENERATE ========"
-cd $DOCKER_COMPOSE_PATH
+cd $DIR_PATH
 docker-compose run --rm hexo generate
