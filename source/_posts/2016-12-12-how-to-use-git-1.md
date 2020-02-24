@@ -27,9 +27,11 @@ git config --global alias.co checkout
 git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.br branch
-git config --global core.editor "mate -w" # 设置Editor使用textmate
-git config -l #列举所有配置
+git config --global core.editor "vim" # 设置Editor使用textmate
  
 #开启git的diff 3
 git config --global merge.conflictstyle diff3
+
+#设置git lg format log
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
